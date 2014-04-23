@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/path"
+            style="@android:style/TextAppearance.Small"
+            android:padding="2dp"
+            android:background="#000000"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+    <ListView
+            android:id="@+id/files"
+            android:smoothScrollbar="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/path"
+            android:layout_above="@+id/actions"/>
+
+    <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:indeterminate="true"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    <LinearLayout
+            android:id="@+id/actions"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            style="@android:style/Holo.ButtonBar"
+            android:visibility="gone">
+
+        <Button
+                android:id="@+id/cancel"
+                android:text="@string/cancel"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@android:style/Widget.Holo.Button.Borderless"/>
+
+        <Button
+                android:id="@+id/submit"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@android:style/Widget.Holo.Button.Borderless"/>
+    </LinearLayout>
+
+</RelativeLayout>
+

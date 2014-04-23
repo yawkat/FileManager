@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">File Manager</string>
+    <string name="error_does_not_exist">The given file does not exist!</string>
+    <string name="error_no_directory">This is not a directory!</string>
+    <string name="icon">Icon</string>
+    <string name="file_count">%s files</string>
+    <string name="error_no_access">Access Denied</string>
+    <string name="error_unknown_file_type">Unknown File Type</string>
+    <string name="loading">Loading…</string>
+    <string name="nothing">""</string>
+    <string name="deleting">Deleting…</string>
+    <string-array name="file_prefixes">
+        <item>"the "</item>
+        <item>"an "</item>
+        <item>"a "</item>
+    </string-array>
+    <string-array name="size_units">
+        <item>%s B</item>
+        <item>%s KB</item>
+        <item>%s MB</item>
+        <item>%s GB</item>
+        <item>%s TB</item>
+        <item>%s PB</item>
+        <item>%s EB</item>
+        <item>%s YB</item>
+    </string-array>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="cancel">Cancel</string>
+    <string name="paste_here">Paste Here</string>
+    <string name="copy">Copy</string>
+    <string name="copy_here">Paste Here</string>
+    <string name="error_already_exists">Specified Target Already Exists</string>
+    <string name="copying">Copying…</string>
+    <string name="move">Move</string>
+    <string name="moving">Moving…</string>
+
+    <!-- settings -->
+
+    <!-- sorters -->
+    <string-array name="sorters">
+        <item>Name</item>
+        <item>Name (ignore certain words)</item>
+        <item>Modification Date</item>
+        <item>Size</item>
+        <item>Random</item>
+    </string-array>
+    <string-array name="sorters_ids">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>0</item>
+        <item>4</item>
+    </string-array>
+    <string name="sorters_default">2</string>
+    <string name="settings">Settings</string>
+    <string name="up">Up</string>
+    <string name="reload">Reload</string>
+    <string name="create_file">Create Empty File</string>
+    <string name="create_directory">Create Directory</string>
+    <string name="error_not_same_file_system">The target file is not on the same file system!</string>
+    <string name="image">Image</string>
+    <string name="share">Share</string>
+    <string name="open">Open</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:title="@string/up"
+            android:id="@+id/up"/>
+    <item
+            android:title="@string/create_file"
+            android:id="@+id/create_file"/>
+    <item
+            android:title="@string/create_directory"
+            android:id="@+id/create_directory"/>
+    <item
+            android:title="@string/reload"
+            android:id="@+id/reload"/>
+    <item
+            android:title="@string/settings"
+            android:id="@+id/settings"/>
+</menu>

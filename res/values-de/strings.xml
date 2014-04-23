@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dateien</string>
+    <string name="error_does_not_exist">Diese Datei existiert nicht!</string>
+    <string name="error_no_directory">Dies ist kein Verzeichnis!</string>
+    <string name="icon">Icon</string>
+    <string name="file_count">%s Dateien</string>
+    <string name="error_no_access">Zugriff Verweigert</string>
+    <string name="error_unknown_file_type">Unbekannter Dateityp</string>
+    <string name="loading">Lade…</string>
+    <string name="nothing">""</string>
+    <string name="deleting">Lösche…</string>
+    <string-array name="file_prefixes">
+        <item>"the "</item>
+        <item>"an "</item>
+        <item>"a "</item>
+        <item>"der "</item>
+        <item>"die "</item>
+        <item>"das "</item>
+        <item>"den "</item>
+        <item>"des "</item>
+        <item>"ein "</item>
+        <item>"eine "</item>
+    </string-array>
+    <string-array name="size_units">
+        <item>%s B</item>
+        <item>%s KB</item>
+        <item>%s MB</item>
+        <item>%s GB</item>
+        <item>%s TB</item>
+        <item>%s PB</item>
+        <item>%s EB</item>
+        <item>%s YB</item>
+    </string-array>
+    <string name="delete">Löschen</string>
+    <string name="rename">Umbenennen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="paste_here">Hier Einfügen</string>
+    <string name="copy">Kopieren</string>
+    <string name="copy_here">Hier Einfügen</string>
+    <string name="error_already_exists">Datei existiert bereits!</string>
+    <string name="copying">Kopiere…</string>
+    <string name="move">Verschieben</string>
+    <string name="moving">Verschiebe…</string>
+
+    <!-- settings -->
+
+    <!-- sorters -->
+    <string-array name="sorters">
+        <item>Name</item>
+        <item>Name (ignoriere bestimmte Wörter)</item>
+        <item>Bearbeitungszeit</item>
+        <item>Größe</item>
+        <item>Zufällig</item>
+    </string-array>
+    <string name="settings">Einstellungen</string>
+    <string name="up">Übergeordnet</string>
+    <string name="reload">Neu Laden</string>
+    <string name="create_file">Leere Datei erstellen</string>
+    <string name="create_directory">Verzeichnis erstellen</string>
+    <string name="error_not_same_file_system">Die Zieldatei liegt nicht im selben Dateisystem!</string>
+    <string name="image">Bild</string>
+    <string name="share">Teilen</string>
+    <string name="open">Öffnen</string>
+</resources>

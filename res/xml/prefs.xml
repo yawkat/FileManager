@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Order">
+        <ListPreference
+                android:key="sorter.btn"
+                android:persistent="false"
+                android:entries="@array/sorters"
+                android:entryValues="@array/sorters_ids"
+                android:summary="Sorting used to sort different directory contents."
+                android:title="Order"/>
+        <CheckBoxPreference
+                android:key="sorter.reverse"
+                android:title="Reverse Order"
+                android:defaultValue="false"
+                android:summary="Reverse order direction when sorting directory contents."/>
+        <CheckBoxPreference
+                android:key="sorter.directories_first"
+                android:title="Directories First"
+                android:defaultValue="true"
+                android:summary="Show directories above any other files."/>
+        <CheckBoxPreference
+                android:key="hidden"
+                android:title="Show Hidden Files"
+                android:defaultValue="false"
+                android:summary="Show files and directories that start with a &quot;.&quot; (UNIX-like hidden files)."/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Display">
+        <CheckBoxPreference
+                android:key="folder_size"
+                android:title="Show Folder Size"
+                android:defaultValue="false"
+                android:summary="Calculate and show folder size in bytes."/>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -376,6 +376,7 @@ public class DirectoryView extends Filetivity {
             startActivity(intent);
             break;
         case R.id.reload:
+            generateSeed();
             refreshFileList();
             break;
         case R.id.up:

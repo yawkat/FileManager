@@ -9,12 +9,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 import at.yawk.filemanager.file.FileException;
 import at.yawk.filemanager.file.FileFilter;
-import at.yawk.filemanager.file.FileSorter;
+import at.yawk.filemanager.file.sort.FileSorter;
+import at.yawk.filemanager.file.sort.RandomSorter;
+import java.util.Random;
 
 /**
  * @author Jonas Konrad (yawkat)
  */
 public abstract class Filetivity extends Activity implements Constants {
+    private static final Random RNG = new Random();
+
+    private long seed;
+
+    { generateSeed(); }
+
+    protected void generateSeed() {
+        seed = RNG.nextInt();
+    }
+
     protected void showErrorDialogAndFinish(FileException error) {
         showErrorDialogAndFinish(error.getMessage(this));
     }
@@ -41,7 +53,7 @@ public abstract class Filetivity extends Activity implements Constants {
     }
 
     protected FileSorter getSorter() {
-        FileSorter s = getSorter0();
+        FileSorter s = getSorter0(seed);
 
         boolean reverse = getPreferences().getBoolean(PREFERENCE_SORTER_REVERSE, false);
         if (reverse) { s = s.reverse(); }
@@ -56,7 +68,7 @@ public abstract class Filetivity extends Activity implements Constants {
         return getPreferences().getBoolean(PREFERENCE_SHOW_FOLDER_SIZE, false);
     }
 
-    private FileSorter getSorter0() {
+    private FileSorter getSorter0(long seed) {
         int id = getPreferences().getInt(PREFERENCE_SORTER, -1);
         switch (id) {
         case SORTER_SIZE:
@@ -69,7 +81,7 @@ public abstract class Filetivity extends Activity implements Constants {
         case SORTER_NAME_INTELLIGENT:
             return FileSorter.intelligentName(this);
         case SORTER_RANDOM:
-            return FileSorter.RANDOM;
+            return new RandomSorter(seed);
         }
     }
 

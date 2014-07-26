@@ -1,5 +1,6 @@
 package at.yawk.filemanager;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
@@ -264,9 +265,18 @@ public class DirectoryView extends Filetivity {
      * Opens the option dialog for the given File.
      */
     public void options(final File file) throws FileException {
-        final Dialog dialog = new Dialog(this);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         View view = getLayoutInflater().inflate(R.layout.file_settings, null);
+        builder.setView(view);
+
+        TextView title = (TextView) getLayoutInflater().inflate(R.layout.file_settings_title, null);
+        title.setText(file.getName());
+        builder.setCustomTitle(title);
+
+        builder.setCancelable(true);
+        final AlertDialog dialog = builder.show();
+
         view.findViewById(R.id.delete).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -335,10 +345,6 @@ public class DirectoryView extends Filetivity {
                 }
             }
         });
-
-        dialog.setTitle(file.getName());
-        dialog.setContentView(view);
-        dialog.show();
     }
 
     @Override
